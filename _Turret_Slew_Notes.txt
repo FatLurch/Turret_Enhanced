@@ -1,0 +1,44 @@
+This line works for commanding the turret when the player is not controlling it :
+
+uav turretunit [0] lookat player;
+
+uav lockCameraTo [getMarkerPos "target", [0]];	//BETTER! Thanks GuyFauwx
+
+Concept:
+1. Kick player out of turret (lockturret?)
+2. Run the command above
+3. Pop user back into turret 
+	player assignAsTurret [uav, [0]];
+	
+	
+	
+	use _vehicle turretUnit _thisTurret to remove AI from turret
+	
+unassignvehicle uav turretunit[0];
+
+
+
+================================
+Important bits
+
+getConnectedUAV player;	//REturns the UAV a player is connected to :)
+
+
+
+===================================================================
+Code:
+
+
+_realPosition = "037056" call BIS_fnc_gridToPos select 0;	//method for typed coordinates
+_realPosition = _realPosition + [0];	//method for typed coordinates
+
+hint format["Pos: %1", _realPosition];
+uav lockCameraTo [_realPosition, [0]];	
+
+openMap [true, false];
+onMapSingleClick "uav lockCameraTo [_pos, [0]];openMap false;";	//method for click on map
+
+
+Next steps:
+Build the GUI
+http://killzonekid.com/?s=gui

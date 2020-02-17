@@ -1,0 +1,16 @@
+_pos = player getRelPos [11, 0];  
+
+_tank = createSimpleObject ["A3\data_f\laserBeam.p3d", position mypoint]; 
+
+_tank setObjectTexture [0, "#(rgb,8,8,3)color(1,1,1,1)"];
+
+
+_pos = player getRelPos [11, 0];  
+
+_tank = createSimpleObject ["Laser\data\laserBeam.p3d", position mypoint]; 
+
+_tank setObjectTexture [0, "#(rgb,8,8,3)color(0,1,0,1)"];
+
+(units group player) enableIRLasers true
+
+AI lockCameraTo (whereever UAV is pointing)
