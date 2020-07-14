@@ -69,8 +69,12 @@ class CfgFunctions
 			{
 				file = "Turret_Enhanced\functions\turretAzEl.sqf";
 			};
-
-		
+			
+			//[_player, _vehicle]call fatLurch_fnc_hasOpticsIn;
+			class hasOpticsIn 
+			{
+				file = "Turret_Enhanced\functions\hasOpticsIn.sqf";
+			};
 		};
 	};
 };
