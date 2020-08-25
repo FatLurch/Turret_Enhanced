@@ -4,6 +4,7 @@
 	2019-02-03 - Adding CBA Keybinds
 	2019-02-14 - Moving displayed coordinates so they fit in the RHS A-10 "TV" in 10 digit mode
 	2019-11-30 - Adding Azimuth and Elevation Indicators
+	2020-08-24 - Adding altitude command
 */
 
 
@@ -70,10 +71,21 @@ class CfgFunctions
 				file = "Turret_Enhanced\functions\turretAzEl.sqf";
 			};
 			
-			//[_player, _vehicle]call fatLurch_fnc_hasOpticsIn;
+			
 			class hasOpticsIn 
 			{
 				file = "Turret_Enhanced\functions\hasOpticsIn.sqf";
+				//Usage: [_player, _vehicle]call fatLurch_fnc_hasOpticsIn;
+			};
+			
+			class changeAltitude
+			{
+				file = "Turret_Enhanced\functions\changeAltitude.sqf";
+			};
+			
+			class altitudeDialogClose
+			{
+				file = "Turret_Enhanced\functions\altitudeDialogClose.sqf";
 			};
 		};
 	};
@@ -359,3 +371,90 @@ class inputCoords
 		
 	};
 };
+
+/*
+class changeAltitude
+{
+	idd = 586;
+	fadein = 0;
+	fadeout = 0;
+	duration = 1e11;
+	onUnload = "uiNamespace setVariable [""coordReturn"", (_this select 1)];";		//TODO
+	
+	class controls
+	{
+		class RscText
+		{
+			idc = 1000;
+			type=0;
+			style=16;
+			text = "Input New Altitude (Meters)"; //--- ToDo: Localize;
+			x = 0.446146 * safezoneW + safezoneX;
+			y = 0.649667 * safezoneH + safezoneY;
+			w = 0.0670312 * safezoneW;
+			h = 0.022 * safezoneH;
+			font = "PuristaMedium";
+			lineSpacing=1;
+			sizeEx = 0.03;
+			colorSelection[] = {-1,-1,-1,-1};
+			colorText[] = {1,1,1,1};
+			colorDisabled[] = {-1,-1,-1,-1}; 
+			colorBackground[] = {0,0,0,0.7};
+		};
+		class RscEdit
+		{
+			idc = 1400;
+			maxChars=10;
+			//forceDrawCaret = true;
+			type = 2;
+			style=16;
+			x = 0.446374 * safezoneW + safezoneX;
+			y = 0.676 * safezoneH + safezoneY;
+			w = 0.0670312 * safezoneW;
+			h = 0.022 * safezoneH;
+			font = "PuristaMedium";
+			autoComplete="";
+			sizeEx = 0.03;
+			colorSelection[] = {-1,-1,-1,-1};
+			colorText[] = {1,1,1,1};
+			colorDisabled[] = {-1,-1,-1,-1}; 
+			colorBackground[] = {0,0,0,0.7};
+			text="";
+		};
+		class RscButton
+		{
+			idc = 1600;
+			type=1;
+			style=16;
+			action="closeDialog 1;_ctrl=(findDisplay 586) displayCtrl 1400;coords = ctrlText _ctrl;_ctrl ctrlSetText '';";		//TODO
+			text = "ENTER"; //--- ToDo: Localize;
+			x = 0.517532 * safezoneW + safezoneX;
+			y = 0.6496 * safezoneH + safezoneY;
+			w = 0.0309375 * safezoneW;
+			h = 0.044 * safezoneH;
+			font = "PuristaMedium";
+			sizeEx = 0.03;
+			colorSelection[] = {-1,-1,-1,-1};
+			colorText[] = {1,1,1,1};
+			colorDisabled[] = {-1,-1,-1,-1}; 
+			colorBackground[] = {0,0,0,0.7};
+			soundEnter[] = {"",0.1,1};
+			soundPush[] = {"",0.1,1};
+			soundClick[] = {"",0.1,1};
+			soundEscape[] = {"",0.1,1};
+			colorBackgroundDisabled[] = {0.6,0.6,0.6,1};
+			colorBackgroundActive[] = {1,0.5,0,1};
+			colorFocused[] = {0,0,0,1};
+			colorShadow[] = {0,0,0,1};
+			offsetX = 0.004;
+			offsetY = 0.004;
+			offsetPressedX = 0.002;
+			offsetPressedY = 0.002;
+			borderSize = 0.008;
+			colorBorder[] = {0,0,0,1};
+			tooltip="Enter on numpad to commit. Escape key to cancel";
+		};
+		
+	};
+};
+*/
