@@ -7,7 +7,7 @@
 	2020-08-24 - Adding altitude command
 */
 
-
+#include "dialogs\changeAltitude.h"
 
 class CfgPatches
 {
