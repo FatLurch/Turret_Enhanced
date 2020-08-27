@@ -26,6 +26,8 @@ _actionID = _unit addAction ["Map Slew", "Turret_Enhanced\scripts\mapSlew.sqf",n
 _actionID = _unit addAction ["Slew to Grid", "Turret_Enhanced\scripts\inputGrid.sqf",nil, 1.05,false, true, "","(([_this, _target] call fatlurch_fnc_isViewISR)&&(Fat_Lurch_Grid))"];
 _actionID = _unit addAction ["Measure Distance", "Turret_Enhanced\scripts\measDistance.sqf",nil, 0.9,false, true, "","(([_this, _target] call fatlurch_fnc_isViewISR)&&(Fat_Lurch_Measure))"];
 
+_actionID = _unit addAction ["Change Altitude", "_this call fatlurch_fnc_changeAltitude",nil, 0.89,false, true, "","(([_this, _target] call fatlurch_fnc_isViewISR))"];	//2020_08_24
+
 _this spawn fatLurch_fnc_North_Ind;	//2019_01_13
 
 mkrNum=0;
