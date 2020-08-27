@@ -13,9 +13,9 @@ class changeAltitude
 		{
 			type = 0;
 			idc = -1;
-			x = safeZoneX + safeZoneW * 0.421875;
+			x = safeZoneX + safeZoneW * 0.43177084;
 			y = safeZoneY + safeZoneH * 0.42037038;
-			w = safeZoneW * 0.14635417;
+			w = safeZoneW * 0.13645834;
 			h = safeZoneH * 0.16018519;
 			style = 0;
 			text = "";
@@ -29,28 +29,28 @@ class changeAltitude
 		{
 			type = 0;
 			idc = -1;
-			x = safeZoneX + safeZoneW * 0.421875;
+			x = safeZoneX + safeZoneW * 0.43177084;
 			y = safeZoneY + safeZoneH * 0.42037038;
-			w = safeZoneW * 0.14635417;
+			w = safeZoneW * 0.13645834;
 			h = safeZoneH * 0.01944445;
 			style = 2;
 			text = "Input New Altitude";
 			colorBackground[] = {0.7961,0.9373,0.1176,0};
 			colorText[] = {0,1,0,1};
 			font = "PuristaBold";
-			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
+			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.1);
 			
 		};
 		class Input
 		{
 			type = 2;
 			idc = 500;
-			x = safeZoneX + safeZoneW * 0.44635417;
-			y = safeZoneY + safeZoneH * 0.47592593;
-			w = safeZoneW * 0.06979167;
+			x = safeZoneX + safeZoneW * 0.43645834;
+			y = safeZoneY + safeZoneH * 0.46018519;
+			w = safeZoneW * 0.03020834;
 			h = safeZoneH * 0.02962963;
 			style = 0;
-			text = "";
+			text = "1000";
 			autocomplete = "";
 			colorBackground[] = {0.2,0.2,0.2,1};
 			colorDisabled[] = {0.2,0.2,0.2,1};
@@ -64,26 +64,27 @@ class changeAltitude
 		{
 			type = 0;
 			idc = -1;
-			x = safeZoneX + safeZoneW * 0.51927084;
-			y = safeZoneY + safeZoneH * 0.47222223;
-			w = safeZoneW * 0.06041667;
+			x = safeZoneX + safeZoneW * 0.46979167;
+			y = safeZoneY + safeZoneH * 0.45370371;
+			w = safeZoneW * 0.09010417;
 			h = safeZoneH * 0.03796297;
 			style = 0;
-			text = "Meters";
+			text = "Altitude (m ASL)";
 			colorBackground[] = {0.7961,0.9373,0.1176,0};
 			colorText[] = {0,1,0,1};
-			font = "PuristaBold";
+			font = "PuristaLight";
 			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
+			tooltip = "The vehicle will attempt to maintain this altitude in meters Above Sea Level";
 			
 		};
 		class OK
 		{
 			type = 1;
 			idc = 1;
-			x = safeZoneX + safeZoneW * 0.43945313;
-			y = safeZoneY + safeZoneH * 0.53298612;
+			x = safeZoneX + safeZoneW * 0.44947917;
+			y = safeZoneY + safeZoneH * 0.5425926;
 			w = safeZoneW * 0.0390625;
-			h = safeZoneH * 0.01909723;
+			h = safeZoneH * 0.02870371;
 			style = 0+2;
 			text = "OK";
 			borderSize = 0;
@@ -113,9 +114,9 @@ class changeAltitude
 			type = 1;
 			idc = 2;
 			x = safeZoneX + safeZoneW * 0.5078125;
-			y = safeZoneY + safeZoneH * 0.53298612;
+			y = safeZoneY + safeZoneH * 0.5425926;
 			w = safeZoneW * 0.0390625;
-			h = safeZoneH * 0.01909723;
+			h = safeZoneH * 0.02870371;
 			style = 0+2;
 			text = "Cancel";
 			borderSize = 0;
@@ -137,6 +138,42 @@ class changeAltitude
 			soundEnter[] = {"\A3\ui_f\data\sound\RscButton\soundEnter",0.09,1.0};
 			soundEscape[] = {"\A3\ui_f\data\sound\RscButton\soundEscape",0.09,1.0};
 			soundPush[] = {"\A3\ui_f\data\sound\RscButton\soundPush",0.09,1.0};
+			
+		};
+		class TerrainAvoidanceInput
+		{
+			type = 2;
+			idc = 501;
+			x = safeZoneX + safeZoneW * 0.43645834;
+			y = safeZoneY + safeZoneH * 0.49722223;
+			w = safeZoneW * 0.03020834;
+			h = safeZoneH * 0.02962963;
+			style = 0;
+			text = "100";
+			autocomplete = "";
+			colorBackground[] = {0.2,0.2,0.2,1};
+			colorDisabled[] = {0.2,0.2,0.2,1};
+			colorSelection[] = {1,0,0,1};
+			colorText[] = {0,1,0,1};
+			font = "PuristaMedium";
+			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
+			tooltip = "If the vehicle is closer than this value to the ground, it will attempt to avoid the ground";
+			
+		};
+		class Label_TA
+		{
+			type = 0;
+			idc = -1;
+			x = safeZoneX + safeZoneW * 0.46979167;
+			y = safeZoneY + safeZoneH * 0.49074075;
+			w = safeZoneW * 0.1;
+			h = safeZoneH * 0.03796297;
+			style = 0;
+			text = "Terrain Avoidance (m)";
+			colorBackground[] = {0.7961,0.9373,0.1176,0};
+			colorText[] = {0,1,0,1};
+			font = "PuristaLight";
+			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
 			
 		};
 		
