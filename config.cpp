@@ -48,7 +48,6 @@ class CfgFunctions
 				file = "Turret_Enhanced\functions\North_Ind.sqf";
 			};
 			
-
 			class isViewISR
 			{
 				file = "Turret_Enhanced\functions\isViewISR.sqf";
@@ -58,19 +57,21 @@ class CfgFunctions
 			{
 				file = "Turret_Enhanced\functions\createMarkerBlack.sqf";
 			};
+			
 			class addMarkerBlu
 			{
 				file = "Turret_Enhanced\functions\createMarkerBlue.sqf";
 			};
+			
 			class addMarkerRed
 			{
 				file = "Turret_Enhanced\functions\createMarkerRed.sqf";
 			};
+			
 			class turretAzEl
 			{
 				file = "Turret_Enhanced\functions\turretAzEl.sqf";
 			};
-			
 			
 			class hasOpticsIn 
 			{
@@ -87,6 +88,18 @@ class CfgFunctions
 			{
 				file = "Turret_Enhanced\functions\altitudeDialogClose.sqf";
 			};
+			
+			class blacklistGUI
+			{
+				file = "Turret_Enhanced\functions\blacklistGUI.sqf";
+			};
+			
+			/*
+			class blacklistActions
+			{
+				file = "Turret_Enhanced\functions\blacklistActions.sqf";
+			};
+			*/
 		};
 	};
 };

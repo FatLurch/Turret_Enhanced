@@ -7,6 +7,9 @@
           <ProjectNodeViewModel xsi:type="ProjectFileNodeViewModel" Name="altitudeDialogClose.sqf" FileName="functions\altitudeDialogClose.sqf">
             <SubNodes />
           </ProjectNodeViewModel>
+          <ProjectNodeViewModel xsi:type="ProjectFileNodeViewModel" Name="blacklistGUI.sqf" FileName="functions\blacklistGUI.sqf">
+            <SubNodes />
+          </ProjectNodeViewModel>
           <ProjectNodeViewModel xsi:type="ProjectFileNodeViewModel" Name="changeAltitude.sqf" FileName="functions\changeAltitude.sqf">
             <SubNodes />
           </ProjectNodeViewModel>
