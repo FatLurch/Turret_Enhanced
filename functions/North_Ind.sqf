@@ -8,11 +8,11 @@ disableSerialization;
 
 _unit = _this;
 
-//_blacklistGUI = [_unit] call fatLurch_fnc_blacklistGUI;
+_blacklistGUI = [_unit] call fatLurch_fnc_blacklistGUI;
 
-//if(_blacklistGUI) exitWith{systemChat "DEBUG North_ind.sqf - Exiting due to blacklisted type: %1"};
+if(_blacklistGUI) exitWith{};
 
-Hz = 5;		//commanded execution rate in Hertz
+Hz = 100;		//commanded execution rate in Hertz
 period = 1/Hz; //calculated period to wait in seconds (assuming 1 second rate from diag_TickTime)
 radius = 0.3;
 
@@ -24,7 +24,7 @@ while{alive _unit} do
 	
 	if(([player, _unit] call fatlurch_fnc_isViewISR)&& (cameraOn == _unit)) then
 	{
-	
+		
 		[_unit] call fatlurch_fnc_turretAzEl params ["_turretAz", "_turretEl"];	//Cheers to commy2 for the help with this. This is the Az & El for the HUD
 	
 		mypitch = _unit call BIS_fnc_getPitchBank select 0;								//get the pitch of the vehicle
