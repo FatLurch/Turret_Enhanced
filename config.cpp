@@ -103,7 +103,11 @@ class CfgFunctions
 			{
 				file = "Turret_Enhanced\functions\mapSlew.sqf";
 			};
-			
+
+			class inputGrid
+			{
+				file = "Turret_Enhanced\functions\inputGrid.sqf";
+			};
 			/*
 			class blacklistActions
 			{

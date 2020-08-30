@@ -1,6 +1,11 @@
 //#include "\bin\dikCodes.h"
 
-_veh = _this select 0;
+//_veh = _this select 0;
+
+params["_veh","_gunner"];
+
+turretPath = _gunner call CBA_fnc_turretPath;
+
 _tmp="";
 _pos= [];
 
@@ -50,17 +55,16 @@ if (_return==1) then
 		_pos set [2,0];
 	};
 	
-	//hint format["pos:%1", _pos];
-	_tmpPos = 'Land_PenBlack_F' createVehicle _pos;
+	_tmpPos = "Land_PenBlack_F" createVehicle _pos;
 	sleep 0.1;
-	_veh lockCameraTo [visiblePositionASL _tmpPos];
+	_veh lockCameraTo [visiblePositionASL _tmpPos, turretPath];
 	_veh setPilotCameraTarget (visiblePositionASL _tmpPos);
 	sleep 0.1;
 	deleteVehicle _tmpPos;
-	hint format['Turret Slewed to %1', coords];
+	hint format["Turret Slewed to %1", coords];
 	waitUntil { _newPosEK=[round (screenToWorld [0.5,0.5] select 0), round (screenToWorld [0.5,0.5] select 1)];sleep 0.1;_newPosEK isEqualTo [round (screenToWorld [0.5,0.5] select 0), round (screenToWorld [0.5,0.5] select 1)]};
-	sleep 0.2;
-	_veh lockCameraTo [objNull,[0]];
+	sleep 0.1;
+	_veh lockCameraTo [objNull,turretPath];
 } 
 else 
 {
