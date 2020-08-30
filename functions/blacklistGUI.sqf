@@ -3,7 +3,7 @@
 
 params ["_veh"];
 
-_blacklistArray = ["USAF_MQ9", "USAF_AC130U"];
+_blacklistArray = ["USAF_MQ9", "USAF_AC130U", "RHS_UH60M_d", "RHS_UH60M"];
 
 _return = typeOf _veh in _blacklistArray;
 

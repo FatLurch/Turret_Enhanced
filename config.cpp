@@ -8,6 +8,7 @@
 */
 
 #include "dialogs\changeAltitude.h"
+#include "dialogs\changeLoiter.h"
 
 class CfgPatches
 {
@@ -128,12 +129,16 @@ class CfgFunctions
 			{
 				file = "Turret_Enhanced\functions\resetUAV.sqf";
 			};
-			
-			
-			
-			
-			
-			
+
+			class changeLoiter
+			{
+				file = "Turret_Enhanced\functions\changeLoiter.sqf";
+			};
+
+			class loiterDialogClose
+			{
+				file = "Turret_Enhanced\functions\loiterDialogClose.sqf";
+			};
 			/*
 			class blacklistActions
 			{
