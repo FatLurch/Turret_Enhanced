@@ -9,14 +9,14 @@ turretPath = _gunner call CBA_fnc_turretPath;
 
 //Create interaction with user
 openMap true;
-hint "Click on the map to slew the turret";
+systemChat "Click on the map to slew the turret";
 
 //Move camera after map click
 _veh onMapSingleClick {
 
 	_test = "Land_PenBlack_F" createVehicle _pos;
 	openMap false;
-	hint format["Turret Slewed to %1", mapgridposition _pos];
+	systemChat format["Turret Slewed to %1", mapgridposition _pos];
 	_this setPilotCameraTarget (visiblePositionASL _test);
 	_this lockCameraTo [visiblePositionASL _test, turretPath];
 	deleteVehicle _test;

@@ -114,6 +114,26 @@ class CfgFunctions
 				file = "Turret_Enhanced\functions\measDistance.sqf";
 			};
 			
+			class getPylonAmmo
+			{
+				file = "Turret_Enhanced\functions\getPylonAmmo.sqf";
+			};
+			
+			class weaponReport
+			{
+				file = "Turret_Enhanced\functions\weaponReport.sqf";
+			};
+
+			class resetUAV
+			{
+				file = "Turret_Enhanced\functions\resetUAV.sqf";
+			};
+			
+			
+			
+			
+			
+			
 			/*
 			class blacklistActions
 			{

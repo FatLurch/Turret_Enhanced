@@ -1,9 +1,7 @@
 /*
 Written by Erik Kofahl (Fat_Lurch) for TSOG
-Last edit: 2019-02-04
 */
 
-//diag_log "-----LURCH DEBUG: createMarker called-----";
 
 if(!(Fat_Lurch_Markers)) exitWith {};
 
@@ -24,8 +22,7 @@ _seed = round(random 1e6);
 _var = "_USER_DEFINED_" + format["%1",_seed];
 _grid = mapgridposition _wPos;
 
-
-hint format["Blue marker %1 created at  %2", mkrNum, _grid]; 
+systemChat format["Blue marker %1 created at  %2", mkrNum, _grid]; 
 
 _markerstr = createMarker [_var, _wPos]; 
 _markerstr setMarkerShape "ICON"; 

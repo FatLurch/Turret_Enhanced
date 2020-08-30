@@ -61,12 +61,12 @@ if (_return==1) then
 	_veh setPilotCameraTarget (visiblePositionASL _tmpPos);
 	sleep 0.1;
 	deleteVehicle _tmpPos;
-	hint format["Turret Slewed to %1", coords];
+	systemChat format["Turret Slewed to %1", coords];
 	waitUntil { _newPosEK=[round (screenToWorld [0.5,0.5] select 0), round (screenToWorld [0.5,0.5] select 1)];sleep 0.1;_newPosEK isEqualTo [round (screenToWorld [0.5,0.5] select 0), round (screenToWorld [0.5,0.5] select 1)]};
 	sleep 0.1;
 	_veh lockCameraTo [objNull,turretPath];
 } 
 else 
 {
-	hint "Operation Cancelled";
+	systemChat "Operation Cancelled";
 };

@@ -57,7 +57,7 @@ while{alive _unit} do
 				case 6: { _target = format["TGT: %1", (mapGridPosition _wPos)];};
 				case 8: { _target = format["TGT: %1 %2", x4, y4]};
 				case 10: { _target = format["TGT: %1 %2", x5, y5]};
-				default { hint "Grid number error" };
+				default { systemChat "Grid number error" };
 				};
 		
 		};
