@@ -108,6 +108,12 @@ class CfgFunctions
 			{
 				file = "Turret_Enhanced\functions\inputGrid.sqf";
 			};
+			
+			class measDistance
+			{
+				file = "Turret_Enhanced\functions\measDistance.sqf";
+			};
+			
 			/*
 			class blacklistActions
 			{

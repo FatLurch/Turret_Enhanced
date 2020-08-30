@@ -18,19 +18,16 @@ _unit = _this;
 _actionID = _unit addAction ["Mark Target (Blk)", "_this call fatlurch_fnc_addMarkerBlk",nil, 1.1,false, true, "","(([_this, _target] call fatlurch_fnc_isViewISR)&&(Fat_Lurch_Markers))"];
 _actionID = _unit addAction ["Mark Target <t color='#0000FF'>(Blu)</t>", "_this call fatlurch_fnc_addMarkerBlu",nil, 1.2,false, true, "","(([_this, _target] call fatlurch_fnc_isViewISR)&&(Fat_Lurch_Markers))"];
 _actionID = _unit addAction ["Mark Target <t color='#FF0000'>(Red)</t>", "_this call fatlurch_fnc_addMarkerRed",nil, 1.3,false, true, "","(([_this, _target] call fatlurch_fnc_isViewISR)&&(Fat_Lurch_Markers))"];
-
-_actionID = _unit addAction ["Measure Distance", "Turret_Enhanced\scripts\measDistance.sqf",nil, 0.9,false, true, "","(([_this, _target] call fatlurch_fnc_isViewISR)&&(Fat_Lurch_Measure))"];
 _actionID = _unit addAction ["Change Altitude", "_this call fatlurch_fnc_changeAltitude",nil, 0.89,false, true, "","(([_this, _target] call fatlurch_fnc_isViewISR))"];	//2020_08_24
 
 _actionID = _unit addAction ["Map Slew", {params ["_target", "_caller", "_actionId", "_arguments"]; [_target, _caller] call fatlurch_fnc_mapSlew;},nil, 1,false, true, "","(([_this, _target] call fatlurch_fnc_isViewISR)&&(Fat_Lurch_MapSlew))"];
-
-_actionID = _unit addAction ["Slew to Grid", 
+_actionID = _unit addAction ["Slew to Grid", {params ["_target", "_caller", "_actionId", "_arguments"]; [_target, _caller] call fatlurch_fnc_inputGrid;},nil, 1.05, false, true, "","(([_this, _target] call fatlurch_fnc_isViewISR)&&(Fat_Lurch_Grid))"];
+_actionID = _unit addAction ["Measure Distance", 
 	{
-		params ["_target", "_caller", "_actionId", "_arguments"];
-		[_target, _caller] call fatlurch_fnc_inputGrid;
+		params ["_target", "_caller", "_actionId", "_arguments"]; 
+		[_target] call fatlurch_fnc_measDistance;
 	}
-	,nil, 1.05, false, true, "","(([_this, _target] call fatlurch_fnc_isViewISR)&&(Fat_Lurch_Grid))"];
-
+	,nil, 0.9,false, true, "","(([_this, _target] call fatlurch_fnc_isViewISR)&&(Fat_Lurch_Measure))"];
 
 _this spawn fatLurch_fnc_North_Ind;	//2019_01_13
 

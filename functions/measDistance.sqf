@@ -1,11 +1,8 @@
 /*
 Written by Erik Kofahl (Fat_Lurch) for TSOG
-Last edit: 2019-01-31
 */
 
-diag_log "-----LURCH DEBUG: measDistance called-----";
-
-_veh = _this select 0;
+params ["_veh"];
 
 _p1 = screenToWorld [0.5,0.5];
 p2 = [0,0,0];
@@ -24,5 +21,4 @@ _dir = round(_p1 getDir p2);
 
 hint format["Distance: %1 meters (2D)\nHeading: %2°", _dist, _dir];
 
-//hint format["_p1: %1\n_p2: %2\nDistance: %3", _p1, p2,_dist];
 
