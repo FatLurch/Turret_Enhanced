@@ -94,6 +94,16 @@ class CfgFunctions
 				file = "Turret_Enhanced\functions\blacklistGUI.sqf";
 			};
 			
+			class getTurretIndex
+			{
+				file = "Turret_Enhanced\functions\getTurretIndex.sqf";
+			};
+			
+			class mapSlew
+			{
+				file = "Turret_Enhanced\functions\mapSlew.sqf";
+			};
+			
 			/*
 			class blacklistActions
 			{

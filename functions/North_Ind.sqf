@@ -16,8 +16,6 @@ Hz = 100;		//commanded execution rate in Hertz
 period = 1/Hz; //calculated period to wait in seconds (assuming 1 second rate from diag_TickTime)
 radius = 0.3;
 
-
-
 while{alive _unit} do
 {
 	uisleep period; 
