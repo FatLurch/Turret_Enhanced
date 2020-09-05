@@ -9,7 +9,7 @@ p2 = [0,0,0];
 
 systemChat "First location set. Slew to new position and select Measure";
 
-_actionID = _veh addAction ["Measure", "p2 = screenToWorld [0.5,0.5]",nil, 0.9,false, true, "","([_this, _target] call fatlurch_fnc_isViewISR)"];
+_actionID = _veh addAction ["Measure", "p2 = screenToWorld [0.5,0.5]",nil,-1000 - 8,false, true, "","([_this, _target] call fatlurch_fnc_isViewISR)"];
 
 waitUntil {!(p2 isEqualTo [0,0,0])};
 

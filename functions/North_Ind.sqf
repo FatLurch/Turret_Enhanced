@@ -12,7 +12,7 @@ _blacklistGUI = [_unit] call fatLurch_fnc_blacklistGUI;
 
 if(_blacklistGUI) exitWith{};
 
-Hz = 100;		//commanded execution rate in Hertz
+Hz = 200;		//commanded execution rate in Hertz
 period = 1/Hz; //calculated period to wait in seconds (assuming 1 second rate from diag_TickTime)
 radius = 0.3;
 
