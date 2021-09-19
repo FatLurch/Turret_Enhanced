@@ -1,7 +1,5 @@
 /*
 Written by Erik Kofahl (Fat_Lurch) for TSOG
-Last edit: 2019-02-03 - Added GUI options
-2019-11-30 - Adding Azimuth and Elevation indicators
 */
 
 disableSerialization;
@@ -25,12 +23,12 @@ while{alive _unit} do
 		
 		[_unit] call fatlurch_fnc_turretAzEl params ["_turretAz", "_turretEl"];	//Cheers to commy2 for the help with this. This is the Az & El for the HUD
 	
-		mypitch = _unit call BIS_fnc_getPitchBank select 0;								//get the pitch of the vehicle
-		myroll = _unit call BIS_fnc_getPitchBank select 1;								//get the roll of the vehicle
-		vehDir = getDir _unit;																				//get the heading of the vehicle
+		mypitch = _unit call BIS_fnc_getPitchBank select 0;	//get the pitch of the vehicle
+		myroll = _unit call BIS_fnc_getPitchBank select 1;		//get the roll of the vehicle
+		vehDir = getDir _unit;								//get the heading of the vehicle
 				
-		_wPos = screenToWorld [0.5,0.5];
-		_vPos = getPos _unit;
+		_wPos = screenToWorld [0.5,0.5];					//Position of the center of the screen
+		_vPos = getPos _unit;								//Position of the vehicle
 	
 		_testVec = _vPos vectorFromTo _wPos;
 		

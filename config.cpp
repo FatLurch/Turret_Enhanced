@@ -139,6 +139,16 @@ class CfgFunctions
 			{
 				file = "Turret_Enhanced\functions\loiterDialogClose.sqf";
 			};
+			
+			class getISRparams
+			{
+				file = "Turret_Enhanced\functions\getISRParams.sqf";
+			};
+			
+			class H60check
+			{
+				file = "Turret_Enhanced\functions\h60check.sqf";
+			};
 			/*
 			class blacklistActions
 			{
